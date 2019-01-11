@@ -1,2 +1,3 @@
-# varp_subsystem
+# VARP Subsystem
+
 Base subsystem for VARP projects
