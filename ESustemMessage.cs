@@ -22,7 +22,7 @@
 // SOFTWARE.
 // =============================================================================
 
-namespace Code.Subsystems
+namespace VARP.Subsystems
 {
     /// <summary>
     /// Extend this enum value by your own events for your game 

@@ -22,12 +22,12 @@
 // SOFTWARE.
 // =============================================================================
 
-namespace Code.Subsystems
+namespace VARP.Subsystems
 {
     /// <summary>
     /// Allow to build tree of systems and deliver messages to all family
     /// </summary>
-    public class BaseSystem
+    public partial class BaseSystem
     {
         private BaseSystem parent;
         private BaseSystem sibling;
@@ -107,7 +107,7 @@ namespace Code.Subsystems
         /// <summary>
         /// Deliver message to all children children of this system. Do not deliver to self.
         /// </summary>
-        public virtual void MessageRouter(BaseSystem src, ESustemMessage msg, object lparam, object rparam)
+        public virtual void MessageRouter(BaseSystem src, ESustemMessage msg, object arg1, object arg2)
         {
             if (src == this)
                 return;
@@ -117,7 +117,7 @@ namespace Code.Subsystems
                 var cur = children;
                 do 
                 {
-                    cur.MessageRouter(src, msg, lparam, rparam);
+                    cur.MessageRouter(src, msg, arg1, arg2);
                 } while ((cur = cur.sibling) != null);
             }
         }
@@ -126,7 +126,7 @@ namespace Code.Subsystems
         /// Deliver message to all family from top system. If @filter is true use this system as sender
         /// but in case if @filter is false, use null as sender
         /// </summary>
-        public virtual void PostMessage(ESustemMessage msg, object lparam = null, object rparam = null, bool filter = false)
+        public virtual void PostMessage(ESustemMessage msg, object arg1 = null, object arg2 = null, bool filter = false)
         {
             var cur = this;
   
@@ -134,20 +134,20 @@ namespace Code.Subsystems
                 cur = cur.parent;
     
             BaseSystem src = filter ? this : null;
-            cur.MessageRouter(src, msg, lparam, rparam);
+            cur.MessageRouter(src, msg, arg1, arg2);
         }
 
         /// <summary>
         /// Deliver message to all family from top system. 
         /// </summary>
-        public virtual void PostMessage(BaseSystem src, ESustemMessage msg, object lparam = null, object rparam = null)
+        public virtual void PostMessage(BaseSystem src, ESustemMessage msg, object arg1 = null, object arg2 = null)
         {
             var cur = this;
   
             while (cur.parent != null)
                 cur = cur.parent;
     
-            cur.MessageRouter(src, msg, lparam, rparam);
+            cur.MessageRouter(src, msg, arg1, arg2);
         }
     }
 }
