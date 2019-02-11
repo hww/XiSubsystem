@@ -58,4 +58,4 @@ To send message there are next method
 public virtual void PostMessage(BaseSystem sender, ESustemMessage msg, object arg1 = null, object arg2 = null)
 ```
 
-[Subsystems Image](Documentation/subsystems.png)
+![Subsystems Image](Documentation/subsystems.png)
