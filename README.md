@@ -4,7 +4,7 @@ Base subsystem for VARP projects
 
 ## Introduction
 
-The system organized by tree of subsystems. Each subsystem has fields to buid the tree
+The system organized by tree of subsystems. Each subsystem has fields to buid the tree.
 
 ```C#
 public partial class BaseSystem
@@ -15,7 +15,7 @@ public partial class BaseSystem
 }
 ```
 
-The list below contains methods for making and ispecting the tree
+The list below contains methods for making and ispecting the tree.
 
 ```C#
 public void AddChild(BaseSystem child)
@@ -23,7 +23,7 @@ public void RemoveChild(BaseSystem child)
 public BaseSystem GetChild(int index)
 ```
 
-The example of subsystem below
+The example of subsystem below.
 
 ```C#
     /// <summary>
@@ -45,17 +45,19 @@ The example of subsystem below
 
 ## Messages
 
-Each subsystem may have a method for receiving messages
+Each subsystem may have a method for receiving messages.
 
 ```C#
 public virtual void OnMessage(BaseSystem sender, ESustemMessage msg, object arg1, object arg2)        
 ```
 
-To send message there are next method
+To send message there are next method.
 
 ```C#
 // Deliver message to all family from top system. 
 public virtual void PostMessage(BaseSystem sender, ESustemMessage msg, object arg1 = null, object arg2 = null)
 ```
+
+Figure below illustrate subsystems tree and message routing.
 
 ![Subsystems Image](Documentation/subsystems.png)
