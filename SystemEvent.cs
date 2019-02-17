@@ -27,22 +27,18 @@ namespace VARP.Subsystems
     /// <summary>
     /// Extend this enum value by your own events for your game 
     /// </summary>
-    public enum ESustemMessage
+    public enum SystemEvent
     {
-        Null,
-        LocaleOnChanged,
+        Null = 0,
+        
         UnitySceneOnLoaded,
         UnitySceneOnUnloaded,
         UnitySceneOnChanged,
-
-        SelectZone,
-        SelectSection,
-        
-        RsSpawnUserObject,
-        RsCreateUserProcess,
-        RsSendUserEvent,
         
         MusicManagerChangeMusic,
-        MusicManagerStopMusic
+        MusicManagerStopMusic,
+        FsmEvent = 0x1000,
+        EntityEvent = 0x2000,
+        GameEvent = 0x4000
     }
 }

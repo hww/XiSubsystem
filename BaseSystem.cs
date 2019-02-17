@@ -107,7 +107,7 @@ namespace VARP.Subsystems
         /// <summary>
         /// Deliver message to all children children of this system. Do not deliver to self.
         /// </summary>
-        public virtual void OnMessage(BaseSystem sender, ESustemMessage msg, object arg1, object arg2)
+        public virtual void OnMessage(BaseSystem sender, int msg, object arg1, object arg2)
         {
             if (sender == this)
                 return;
@@ -125,7 +125,7 @@ namespace VARP.Subsystems
         /// <summary>
         /// Deliver message to all family from top system. 
         /// </summary>
-        public virtual void PostMessage(BaseSystem sender, ESustemMessage msg, object arg1 = null, object arg2 = null)
+        public virtual void PostMessage(BaseSystem sender, int msg, object arg1 = null, object arg2 = null)
         {
             var cur = this;
   
