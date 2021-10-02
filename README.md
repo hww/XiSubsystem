@@ -1,4 +1,4 @@
-# VARP Subsystem
+# extSubsystem
 
 Base subsystem for VARP projects
 
