@@ -1,4 +1,4 @@
-﻿// =============================================================================
+// =============================================================================
 // MIT License
 // 
 // Copyright (c) 2018 Valeriya Pudova (hww.github.io)
@@ -22,31 +22,23 @@
 // SOFTWARE.
 // =============================================================================
 
-using System.Text;
 using UnityEngine;
 
-namespace VARP.Subsystems
+namespace extSubsystem
 {
-    public partial class BaseSystem 
+    /// <summary>
+    /// Just display all messages in system
+    /// </summary>
+    public class ConsoleSystem : BaseSystem
     {
-        public static string Inspect(BaseSystem system)
+        public ConsoleSystem(BaseSystem parent)
         {
-            var sb = new StringBuilder();
-            Inspect(system, sb);
-            return sb.ToString();
+            parent.AddChild(this);
         }
-        
-        public static void Inspect(BaseSystem system, StringBuilder sb, string prefix = "")
+
+        public override void OnMessage(BaseSystem sender, int msg, object arg1, object arg2)
         {
-            Debug.Assert(system != null);
-            sb.Append(prefix);
-            sb.AppendLine(system.GetType().Name);
-            var current = system.children;
-            while (current != null)
-            {
-                Inspect(current, sb, prefix + "  ");
-                current = current.sibling;
-            }
+            Debug.LogFormat("[{0:0.00}] {1} arg1: {2} arg2: {3}", Time.time, msg, arg1, arg2);
         }
     }
 }

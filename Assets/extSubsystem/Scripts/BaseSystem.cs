@@ -22,7 +22,7 @@
 // SOFTWARE.
 // =============================================================================
 
-namespace VARP.Subsystems
+namespace extSubsystem
 {
     /// <summary>
     /// Allow to build tree of systems and deliver messages to all family
