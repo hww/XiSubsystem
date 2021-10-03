@@ -22,7 +22,7 @@
 // SOFTWARE.
 // =============================================================================
 
-namespace extSubsystem
+namespace XiSubsystem
 {
     /// <summary>
     /// Extend this enum value by your own events for your game 

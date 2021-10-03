@@ -1,6 +1,6 @@
 {
-    "name": "extSubsystem",
-    "rootNamespace": "extSubsystem",
+    "name": "XiSubsystem",
+    "rootNamespace": "XiSubsystem",
     "references": [
         "UnityEditor.UI",
         "Unity.TextMeshPro"
