@@ -59,7 +59,7 @@ public virtual void OnMessage(BaseSystem sender, ESustemMessage msg, object arg1
 To send message there are next method.
 
 ```C#
-// Deliver message to all family from top system. 
+// Deliver the message to all family from top system. 
 public virtual void PostMessage(BaseSystem sender, ESustemMessage msg, object arg1 = null, object arg2 = null)
 ```
 
