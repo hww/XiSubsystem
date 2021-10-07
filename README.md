@@ -3,9 +3,9 @@
 Base subsystem for my Unity projects
 
 ![](https://img.shields.io/badge/unity-2021.1%20or%20later-green.svg)
-[![⚙ Build and Release](https://github.com/hww/XiSusystem/actions/workflows/ci.yml/badge.svg)](https://github.com/hww/XiSusystem/actions/workflows/ci.yml)
-[![openupm](https://img.shields.io/npm/v/com.hww.XiSusystem?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.hww.XiSusystem/)
-[![](https://img.shields.io/github/license/hww/XiSusystem.svg)](https://github.com/hww/XiSusystem/blob/master/LICENSE)
+[![⚙ Build and Release](https://github.com/hww/XiSubsystem/actions/workflows/ci.yml/badge.svg)](https://github.com/hww/XiSubsystem/actions/workflows/ci.yml)
+[![openupm](https://img.shields.io/npm/v/com.hww.XiSubsystem?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.hww.XiSubsystem/)
+[![](https://img.shields.io/github/license/hww/XiSubsystem.svg)](https://github.com/hww/XiSubsystem/blob/master/LICENSE)
 
 ## Introduction
 
