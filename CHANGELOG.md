@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/hww/XiSubsystem/compare/v1.0.0...v1.0.1) (2021-10-07)
+
+
+### Bug Fixes
+
+* **XiSubsystem:** fix ([5f9374f](https://github.com/hww/XiSubsystem/commit/5f9374ff4939a7757526ddcc51e1886ae6017dc7))
+
 # 1.0.0 (2021-10-07)
 
 
