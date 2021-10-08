@@ -1,4 +1,4 @@
-# extSubsystem
+# XiSubsystem
 
 Base subsystem for my Unity projects
 
