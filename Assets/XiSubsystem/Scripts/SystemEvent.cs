@@ -34,10 +34,9 @@ namespace XiSubsystem
         UnitySceneOnLoaded,
         UnitySceneOnUnloaded,
         UnitySceneOnChanged,
-        
-        MusicManagerChangeMusic,
-        MusicManagerStopMusic,
-        FsmEvent = 0x1000,
+
+        // Pseudo events
+        SoundEvent = 0x1000,
         EntityEvent = 0x2000,
         GameEvent = 0x4000
     }
