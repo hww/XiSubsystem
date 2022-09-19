@@ -1,11 +1,12 @@
 # XiSubsystem
 
-Base subsystem for my Unity projects
-
-![](https://img.shields.io/badge/unity-2021.1%20or%20later-green.svg)
+![](https://img.shields.io/badge/unity-2018.3%20or%20later-green.svg)
 [![⚙ Build and Release](https://github.com/hww/XiSubsystem/actions/workflows/ci.yml/badge.svg)](https://github.com/hww/XiSubsystem/actions/workflows/ci.yml)
-[![openupm](https://img.shields.io/npm/v/com.hww.XiSubsystem?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.hww.XiSubsystem/)
+[![openupm](https://img.shields.io/npm/v/com.hww.xisubsystem?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.hww.xisubsystem/)
 [![](https://img.shields.io/github/license/hww/XiSubsystem.svg)](https://github.com/hww/XiSubsystem/blob/master/LICENSE)
+[![semantic-release: angular](https://img.shields.io/badge/semantic--release-angular-e10079?logo=semantic-release)](https://github.com/semantic-release/semantic-release)
+
+Base subsystem for any Unity 3D projects created by [hww](https://github.com/hww)
 
 ## Introduction
 
