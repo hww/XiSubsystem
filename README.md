@@ -18,9 +18,9 @@ The system organized by tree of subsystems. Each subsystem has fields to buid th
 ```C#
 public partial class BaseSystem
 {
-        private BaseSystem parent;
-        private BaseSystem sibling;
-        private BaseSystem children;
+    private BaseSystem parent;
+    private BaseSystem sibling;
+    private BaseSystem children;
 }
 ```
 
@@ -35,21 +35,21 @@ public BaseSystem GetChild(int index)
 The example of subsystem below. 
 
 ```C#
-    /// <summary>
-    /// Just display all messages in system
-    /// </summary>
-    public class ConsoleSystem : BaseSystem
+/// <summary>
+/// Just display all messages in system
+/// </summary>
+public class ConsoleSystem : BaseSystem
+{
+    public ConsoleSystem(BaseSystem parent)
     {
-        public ConsoleSystem(BaseSystem parent)
-        {
-            parent.AddChild(this);
-        }
-
-        public override void OnMessage(BaseSystem sender, ESustemMessage msg, object arg1, object arg2)
-        {
-            Debug.LogFormat("[{0:0.00}] {1} arg1: {2} arg2: {3}", Time.time, msg, arg1, arg2);
-        }
+        parent.AddChild(this);
     }
+
+    public override void OnMessage(BaseSystem sender, ESustemMessage msg, object arg1, object arg2)
+    {
+        Debug.LogFormat("[{0:0.00}] {1} arg1: {2} arg2: {3}", Time.time, msg, arg1, arg2);
+    }
+}
 ```
 
 A bit more practical example 
@@ -105,24 +105,24 @@ private static readonly Subsystem[] Subsystems = {
 The full code of the initialization structure Subsystem below
 
 ```C#
-    /// <summary>
-    /// Structure for initialization of a subsystem.
-    /// </summary>
-    public struct Subsystem
-    {
-        /// <summary> Subsystem name </summary>
-        public string name;        
-        /// <summary> Called for each sub-system to initialize </summary>
-        public Action preInitialize;
-        /// <summary> Called after all sub-system InitA was called </summary>
-        public Action initialize;
-        /// <summary> Called for each entry </summary>
-        public Action<object> initializeObject;
-        /// <summary> Called for each sub-system- to de-initialize </summary>
-        public Action deInitialize;
-        /// <summary> Object type for this Subsystem </summary>
-        public Type entryType;
-    }
+/// <summary>
+/// Structure for initialization of a subsystem.
+/// </summary>
+public struct Subsystem
+{
+    /// <summary> Subsystem name </summary>
+    public string name;        
+    /// <summary> Called for each sub-system to initialize </summary>
+    public Action preInitialize;
+    /// <summary> Called after all sub-system InitA was called </summary>
+    public Action initialize;
+    /// <summary> Called for each entry </summary>
+    public Action<object> initializeObject;
+    /// <summary> Called for each sub-system- to de-initialize </summary>
+    public Action deInitialize;
+    /// <summary> Object type for this Subsystem </summary>
+    public Type entryType;
+}
 ```
 ## Messages
 
