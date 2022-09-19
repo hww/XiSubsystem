@@ -29,7 +29,7 @@ public void RemoveChild(BaseSystem child)
 public BaseSystem GetChild(int index)
 ```
 
-The example of subsystem below.
+The example of subsystem below. 
 
 ```C#
     /// <summary>
