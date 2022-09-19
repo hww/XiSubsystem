@@ -81,16 +81,16 @@ public partial class SoundSystem : BaseSystem
 ## Initialization
 
 ```C#
-private static readonly Subsystem[] Subsystems = {
+private static readonly SystemConfig[] Subsystems = {
     // the example of system abowe
-    new Subsystem
+    new SystemConfig
     {
         name = "GameSoundSystem",
         preInitialize = GameSoundSystem.PreInitialize,
         deInitialize = GameSoundSystem.DeInitialize
     },
     // as example here is more complex system
-    new Subsystem
+    new SystemConfig
     {
         name = "SpawnerSystem",
         preInitialize = SpawnerSystem.PreInitialize,
@@ -108,7 +108,7 @@ The full code of the initialization structure Subsystem below
 /// <summary>
 /// Structure for initialization of a subsystem.
 /// </summary>
-public struct Subsystem
+public struct SystemConfig
 {
     /// <summary> Subsystem name </summary>
     public string name;        

@@ -30,7 +30,7 @@ namespace XiSubsystem
     /// <summary>
     /// Structure for initialization of a subsystem.
     /// </summary>
-    public struct Subsystem
+    public struct SystemConfig
     {
         /// <summary> Subsystem name </summary>
         public string name;
@@ -38,7 +38,7 @@ namespace XiSubsystem
         /// <summary> Called for each sub-system to initialize </summary>
         public Action preInitialize;
 
-        /// <summary> Called after all sub-system InitA was called </summary>
+        /// <summary> Called after all sub-system preInitialize was called </summary>
         public Action initialize;
 
         /// <summary> Called for each entry </summary>
