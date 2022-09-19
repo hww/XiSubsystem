@@ -80,6 +80,8 @@ public partial class SoundSystem : BaseSystem
 ```        
 ## Initialization
 
+The two passes initialization process calls the method _preInitialize_ for all subsystems at the phase 1. Then calls the method _initialize_ at the phase 2. 
+
 ```C#
 private static readonly SystemConfig[] Subsystems = {
     // the example of system abowe
@@ -112,18 +114,20 @@ public struct SystemConfig
 {
     /// <summary> Subsystem name </summary>
     public string name;        
-    /// <summary> Called for each sub-system to initialize </summary>
+    /// <summary> Called for each subsystem to initialize </summary>
     public Action preInitialize;
-    /// <summary> Called after all sub-system InitA was called </summary>
+    /// <summary> Called after all subsystem preInitialize was called </summary>
     public Action initialize;
     /// <summary> Called for each entry </summary>
     public Action<object> initializeObject;
-    /// <summary> Called for each sub-system- to de-initialize </summary>
+    /// <summary> Called for each subsystem to de-initialize </summary>
     public Action deInitialize;
     /// <summary> Object type for this Subsystem </summary>
     public Type entryType;
 }
 ```
+
+
 ## Messages
 
 Each subsystem may have a method for receiving messages.
@@ -143,4 +147,41 @@ Figure below illustrate subsystems tree and message routing.
 
 ![Subsystems Image](Documentation/subsystems.png)
 
+### Garbage 
+
 To prevent a garbage should be used a message container for arg1 and arg2.
+
+### Extend the message ID
+
+Because the SystemEvent enum defined in this class, there should be a way to extend enum for the game. Therefore there is pseudo event ids.
+
+```C#
+public enum SystemEvent
+{
+    Null = 0,
+        
+    UnitySceneOnLoaded,
+    UnitySceneOnUnloaded,
+    UnitySceneOnChanged,
+        
+    ...
+    // Pseudo events
+    SoundEvent = 0x1000,
+    EntityEvent = 0x2000,
+    GameEvent = 0x4000
+}
+```
+
+For example sound events of the game can be specified as:
+
+```C#
+public enum SoundEvent
+{
+    Null = SystemEvent::SoundEvent,
+    PlayMusic,
+    PlaySound,
+    ....
+}
+```
+
+The same way can be added EntityEvents or GameEvents. 
