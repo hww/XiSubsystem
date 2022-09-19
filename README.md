@@ -13,7 +13,24 @@ Base subsystem for any Unity 3D projects created by [hww](https://github.com/hww
 In my projects, the Subsystem is a replacement for the Singletone class. It's a better solution and allows you to make more complex projects without any headaches. Imagine Singletones that can be organized as a tree, but can also be initialized in a few passes -- that's what the Subsystem is for. On top of everything else, each Subsystem can receive and broadcast messages.
 
 This solution was successfully used in several game projects, which made the Singletone class and all its problems unnecessary.
-The system organized by tree of subsystems. Each subsystem has fields to buid the tree.
+The system organized by tree of subsystems. 
+
+## Install
+
+The package is available on the openupm registry. You can install it via openupm-cli.
+
+```bash
+openupm add com.hww.xicore
+```
+You can also install via git url by adding this entry in your manifest.json
+
+```bash
+"com.hww.xicore": "https://github.com/hww/XiCore.git#upm"
+```
+
+## Usage 
+
+Each subsystem has fields to buid the tree.
 
 ```C#
 public partial class BaseSystem
