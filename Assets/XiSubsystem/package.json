@@ -1,7 +1,7 @@
 {
   "name": "com.hww.xisubsystem",
   "displayName": "XiSubsystem",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "unity": "2021.1",
   "description": "XiSubsystem is a debug tools for Unity.",
   "license": "MIT",
