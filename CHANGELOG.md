@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/hww/XiSubsystem/compare/v1.0.2...v1.0.3) (2022-09-19)
+
+
+### Bug Fixes
+
+* **config:** added the SystemConfig ([4e5b149](https://github.com/hww/XiSubsystem/commit/4e5b1497acecaac7ed5ec7de2eb78cb35cea389a))
+
 ## [1.0.2](https://github.com/hww/XiSubsystem/compare/v1.0.1...v1.0.2) (2022-09-19)
 
 
