@@ -52,6 +52,57 @@ The example of subsystem below.
     }
 ```
 
+A bit more practical example 
+
+```C#
+public partial class SoundSystem : BaseSystem
+{
+    /// <summary>SoundSystem constructor</summary>
+    public SoundSystem(BaseSystem parent)
+    {
+        parent.AddChild(this);
+    }
+
+    // Singleton
+
+    /// <summary>Initialize system</summary>
+    public static void PreInitialize()
+    {
+        // Initialization code;
+    }
+
+    /// <summary>De initialize system</summary>
+    public static void DeInitialize()
+    {
+        // Deinitialization
+    }   
+}   
+```        
+## Initialization
+
+```C#
+private static readonly Subsystem[] Subsystems = {
+    // the example of system abowe
+    new Subsystem
+    {
+        name = "GameSoundSystem",
+        preInitialize = GameSoundSystem.PreInitialize,
+        deInitialize = GameSoundSystem.DeInitialize
+    },
+    // as example here is more complex system
+    new Subsystem
+    {
+        name = "SpawnerSystem",
+        preInitialize = SpawnerSystem.PreInitialize,
+        initialize = SpawnerSystem.Initialize,
+        deInitialize = SpawnerSystem.DeInitialize,
+        initializeObject = SpawnerSystem.InitializeObject,
+        entryType = typeof(Spawner)
+    },
+    ...
+}
+```
+
 ## Messages
 
 Each subsystem may have a method for receiving messages.
