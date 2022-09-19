@@ -70,3 +70,5 @@ public virtual void PostMessage(BaseSystem sender, ESustemMessage msg, object ar
 Figure below illustrate subsystems tree and message routing.
 
 ![Subsystems Image](Documentation/subsystems.png)
+
+To prevent a garbage should be used a message container for arg1 and arg2.
