@@ -1,3 +1,17 @@
+## [1.0.2](https://github.com/hww/XiSubsystem/compare/v1.0.1...v1.0.2) (2022-09-19)
+
+
+### Bug Fixes
+
+* **CI:** Update CI config ([bc29030](https://github.com/hww/XiSubsystem/commit/bc2903053ac4df4a9e2e2199a99cf0504c6e7d66))
+
+## [1.0.1](https://github.com/hww/XiSubsystem/compare/v1.0.0...v1.0.1) (2021-10-07)
+
+
+### Bug Fixes
+
+* **XiSubsystem:** fix ([5f9374f](https://github.com/hww/XiSubsystem/commit/5f9374ff4939a7757526ddcc51e1886ae6017dc7))
+
 # 1.0.0 (2021-10-07)
 
 
