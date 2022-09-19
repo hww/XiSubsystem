@@ -20,12 +20,12 @@ The system organized by tree of subsystems.
 The package is available on the openupm registry. You can install it via openupm-cli.
 
 ```bash
-openupm add com.hww.xicore
+openupm add com.hww.xisubsystem
 ```
 You can also install via git url by adding this entry in your manifest.json
 
 ```bash
-"com.hww.xicore": "https://github.com/hww/XiCore.git#upm"
+"com.hww.xisubsystem": "https://github.com/hww/XiSubsystem.git#upm"
 ```
 
 ## Usage 
