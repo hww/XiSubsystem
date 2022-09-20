@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/hww/XiSubsystem/compare/v1.0.3...v1.0.4) (2022-09-20)
+
+
+### Bug Fixes
+
+* **config:** Added files to project ([edea655](https://github.com/hww/XiSubsystem/commit/edea6552f08dc3b5bea1986c19f859b259427d84))
+
 ## [1.0.3](https://github.com/hww/XiSubsystem/compare/v1.0.2...v1.0.3) (2022-09-19)
 
 
